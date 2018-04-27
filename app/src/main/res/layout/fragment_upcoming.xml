@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <SearchView
+        android:id="@+id/homeFragment_genreFilterSearchView"
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/toolbar_search"
+        android:theme="@style/AppTheme.SearchView"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/homeFragment_genreFilterRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@id/homeFragment_genreFilterSearchView"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/upcoming_genre_item"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/homeFragment_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/homeFragment_genreFilterRecyclerView"
+        android:clipToPadding="false"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:itemCount="10"
+        tools:listitem="@layout/upcoming_movie_item" />
+
+    <ProgressBar
+        android:id="@+id/homeFragment_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:theme="@style/AppTheme.WhiteAccent"
+        tools:visibility="gone" />
+
+</RelativeLayout>
