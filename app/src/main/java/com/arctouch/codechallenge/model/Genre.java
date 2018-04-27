@@ -1,9 +1,20 @@
 package com.arctouch.codechallenge.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Genre {
 
-    public int id;
-    public String name;
+    @SerializedName("id")
+    private int id;
+    public int getId() {
+        return id;
+    }
+
+    @SerializedName("name")
+    private String name;
+    public String getName() {
+        return name != null ? name : "";
+    }
 
     @Override
     public boolean equals(Object o) {
