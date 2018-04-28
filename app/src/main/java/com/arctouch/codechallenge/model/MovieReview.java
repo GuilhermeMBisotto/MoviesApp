@@ -14,7 +14,6 @@ public class MovieReview {
 
         return reviews;
     }
-
     public void setReviews(ArrayList<Review> reviews) {
         this.reviews = reviews;
     }

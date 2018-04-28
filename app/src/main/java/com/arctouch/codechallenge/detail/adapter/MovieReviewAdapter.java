@@ -43,8 +43,10 @@ public class MovieReviewAdapter extends BaseAdapter {
 
         Review review = items.get(position);
 
-        LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = vi.inflate(R.layout.movie_detail_review_item, null);
+        if (convertView == null){
+            LayoutInflater vi = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = vi.inflate(R.layout.movie_detail_review_item, parent);
+        }
 
         ((TextView) convertView.findViewById(R.id.movieReviewItem_authorTitleTextView)).setText(review.getAuthor());
         ((TextView) convertView.findViewById(R.id.movieReviewItem_contentTextView)).setText(review.getContent());

@@ -212,7 +212,6 @@ public class UpcomingActivityFragment extends Fragment {
     }
 
     private void performDetail(int id, View view) {
-
         Intent intent = new Intent(UpcomingActivityFragment.this.getActivity(), DetailMovieActivity.class);
         intent.putExtra("movieId", id);
 

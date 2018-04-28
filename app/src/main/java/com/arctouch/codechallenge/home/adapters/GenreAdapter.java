@@ -33,18 +33,18 @@ public class GenreAdapter extends RecyclerView.Adapter<GenreAdapter.ViewHolder> 
         notifyDataSetChanged();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView nameTextView;
         private final ImageView removeImageView;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.genreItem_nameTextView);
             removeImageView = itemView.findViewById(R.id.genreItem_removeImageView);
         }
 
-        public void bind(GenreItem genreItem, OnItemClickListener listener, int position) {
+        void bind(GenreItem genreItem, OnItemClickListener listener, int position) {
             nameTextView.setText(genreItem.getGenre().getName());
             removeImageView.setVisibility(genreItem.isSelect() ? View.VISIBLE : View.GONE);
             itemView.setOnClickListener(v -> listener.onItemClick(position));

@@ -20,7 +20,7 @@ public class APIHandler {
             };
         }
 
-        public Service(APIHandler.Controller controllerHandler) {
+        protected Service(APIHandler.Controller controllerHandler) {
             this.controllerHandler = controllerHandler;
         }
 
@@ -38,6 +38,5 @@ public class APIHandler {
         public abstract void onError(APIServiceResultFailed error);
         public abstract void onFailure(APIServiceResultFailed failure);
         public abstract void onFinish();
-
     }
 }

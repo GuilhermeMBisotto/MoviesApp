@@ -26,9 +26,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+
 public class DetailMovieActivityFragment extends Fragment {
 
     @BindView(R.id.movieDetail_bgImageView)
@@ -56,7 +54,6 @@ public class DetailMovieActivityFragment extends Fragment {
     private MovieReview mMovieReview;
     private MovieReviewAdapter mMovieReviewAdapter;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_detail_movie, container, false);
@@ -81,8 +78,6 @@ public class DetailMovieActivityFragment extends Fragment {
     }
 
     private void getDetail(int id) {
-
-
         MoviesServices.getDetailMovie(id, new APIHandler.Controller() {
             @Override
             public void onStart() { }
@@ -104,8 +99,6 @@ public class DetailMovieActivityFragment extends Fragment {
     }
 
     private void getReviews(int id) {
-
-
         MoviesServices.getReview(id, new APIHandler.Controller() {
             @Override
             public void onStart() { }
@@ -128,7 +121,6 @@ public class DetailMovieActivityFragment extends Fragment {
     }
 
     private void setValues(MovieDetail movie) {
-
         titleTextView.setText(movie.getTitle());
         releaseDateTextView.setText(movie.getReleaseDate());
         genresTextView.setText(TextUtils.join(" • ", movie.genres));
@@ -154,8 +146,6 @@ public class DetailMovieActivityFragment extends Fragment {
                     .apply(new RequestOptions().placeholder(R.drawable.ic_launcher_foreground))
                     .into(bgImageView);
         }
-
-
     }
 
     @SuppressWarnings("unused")

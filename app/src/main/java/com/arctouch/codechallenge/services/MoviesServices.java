@@ -26,8 +26,6 @@ public class MoviesServices {
             add(new Pair<>("page",Integer.toString(page)));
         }};
 
-//        add(new Pair<>("region", Constants.DEFAULT_REGION));
-
         APIService.GET(GET_UPCOMING_URL, params, new APIHandler.Service(callback) {
             @Override
             public void onSuccess(Object obj) {

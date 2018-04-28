@@ -29,7 +29,7 @@ public class UpcomingMoviesAdapter extends RecyclerView.Adapter<UpcomingMoviesAd
     private List<Movie> items;
     private List<Movie> itemsCopy;
     private Context mContext;
-    OnBottomReachedListener onBottomReachedListener;
+    private OnBottomReachedListener onBottomReachedListener;
     private final OnItemClickListener listener;
 
     public interface OnBottomReachedListener {
@@ -47,7 +47,7 @@ public class UpcomingMoviesAdapter extends RecyclerView.Adapter<UpcomingMoviesAd
         this.itemsCopy = new ArrayList<>();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView titleTextView;
         private final TextView genresTextView;
@@ -55,7 +55,7 @@ public class UpcomingMoviesAdapter extends RecyclerView.Adapter<UpcomingMoviesAd
         private final ImageView posterImageView;
         private final ImageView adultImageView;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             titleTextView = itemView.findViewById(R.id.titleTextView);
             genresTextView = itemView.findViewById(R.id.genresTextView);
@@ -64,7 +64,7 @@ public class UpcomingMoviesAdapter extends RecyclerView.Adapter<UpcomingMoviesAd
             adultImageView = itemView.findViewById(R.id.adultImageView);
         }
 
-        public void bind(Movie movie, Context c, OnItemClickListener listener) {
+        void bind(Movie movie, Context c, OnItemClickListener listener) {
             titleTextView.setText(movie.getTitle());
             genresTextView.setText(TextUtils.join(", ", movie.genres));
             releaseDateTextView.setText(movie.getReleaseDate());
