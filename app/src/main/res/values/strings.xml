@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">Code Challenge</string>
+    <string name="app_name">Upcoming</string>
     <string name="movie_and_genres">%s - %s</string>
+    <string name="toolbar_search">Search…</string>
+
+    <string name="apiError_unableToResolveHost">It seems that your internet connection is unstable.</string>
+    <string name="apiError_somethingFailedAtServerSide">Oops… Something wrong happens \nDon't worry, we'll fix it.</string>
+    <string name="title_activity_detail_movie">DetailMovieActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="activity_fragment_detail_movie_overview">Overview</string>
+    <string name="activity_fragment_detail_movie_genre">Genre</string>
+
 </resources>

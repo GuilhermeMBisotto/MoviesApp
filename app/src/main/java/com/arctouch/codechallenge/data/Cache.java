@@ -8,7 +8,6 @@ import java.util.List;
 public class Cache {
 
     private static List<Genre> genres = new ArrayList<>();
-
     public static List<Genre> getGenres() {
         return genres;
     }

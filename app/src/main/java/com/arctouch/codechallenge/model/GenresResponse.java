@@ -1,17 +1,20 @@
 package com.arctouch.codechallenge.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
-public class GenreResponse {
+public class GenresResponse {
 
+    @SerializedName("genres")
     public List<Genre> genres;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof GenreResponse)) return false;
+        if (!(o instanceof GenresResponse)) return false;
 
-        GenreResponse that = (GenreResponse) o;
+        GenresResponse that = (GenresResponse) o;
 
         return genres != null ? genres.equals(that.genres) : that.genres == null;
     }
@@ -23,7 +26,7 @@ public class GenreResponse {
 
     @Override
     public String toString() {
-        return "GenreResponse{" +
+        return "GenresResponse{" +
                 "genres=" + genres +
                 '}';
     }
